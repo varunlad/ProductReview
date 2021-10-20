@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace LINQDemo058
 {
-    //UC8
+    //UC8 Create DataTable
     class DataTableDemo
     {
         public static void CreateDataTable()

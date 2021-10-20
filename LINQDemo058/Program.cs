@@ -47,7 +47,7 @@ namespace LINQDemo058
                 new ProductReview(){ProductId=6,UserId=5,Review="good",Rating=17,Islike=true},
             };
             DataTableDemo.CreateDataTable();
-            ProductIdAverage(list);
+            ProductIdandReviewUC7(list);
             Console.ReadLine();
         }
         //UC1
@@ -126,18 +126,6 @@ namespace LINQDemo058
                 Console.WriteLine("=====================================");
             }
         }
-        //UC10
-        //Find Average according to Review
-        public static void ProductIdAverage(List<ProductReview> list)
-        {
-            var data = (list.GroupBy(a => a.ProductId).Select(x => new { ProductId = x.Key, Rating = x.Average() }));
-            //var data = (list.Select(a => a.ProductId).Select(c => new { Rating = c.Average() }));
-            Console.WriteLine("Average of Each Product Id is: ");
-            foreach (var element in data)
-            {
-                Console.WriteLine("Product ID: " + element.ProductId + "\t : " + element.average);
-                Console.WriteLine("========================================================");
-            }
-        }
+       
     }
 }
